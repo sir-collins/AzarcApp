@@ -1,0 +1,81 @@
+<form class="input-group d-inline-flex p-2" [formGroup]="viewForm">
+  <!-- <div class="form-outline">
+    <input
+      type="search"
+      id="form1"
+      formControlName="search"
+      class="form-control"
+    />
+    <label class="form-label" for="form1">Search</label>
+  </div>
+  <button type="button" class="btn btn-primary" (click)="fetchData()">
+    <i class="fas fa-search"></i>
+  </button> -->
+
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Search"
+      aria-label="Recipient's username"
+      aria-describedby="basic-addon2"
+      formControlName="search"
+    />
+    <div class="input-group-append">
+      <button
+        class="btn btn-outline-primary"
+        type="button"
+        (click)="fetchData()"
+      >
+        Search
+      </button>
+    </div>
+  </div>
+</form>
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">Office Location</th>
+      <th scope="col">Phone Number</th>
+      <th scope="col">Email Address</th>
+      <th scope="col">Postal Code</th>
+      <th scope="col">Operations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users$ | async">
+      <td>{{ user.firstName }}</td>
+      <td>{{ user.lastName }}</td>
+      <td>{{ user.address }}</td>
+      <td>{{ user.officeLocation }}</td>
+      <td>{{ user.phoneNumber }}</td>
+      <td>{{ user.emailAddress }}</td>
+      <td>{{ user.postalCode }}</td>
+      <td>
+        <!-- <button
+          (click)="editUser(user)"
+          class="btn btn-primary"
+          style="margin: 5px"
+        >
+          Update
+        </button> -->
+        <a
+          class="btn btn-primary btn-sm"
+          [routerLink]="['../employees', user.id]"
+          role="button"
+          >Update</a
+        >
+        <button
+          (click)="deleteUser(user)"
+          class="btn btn-danger"
+          style="margin: 5px"
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

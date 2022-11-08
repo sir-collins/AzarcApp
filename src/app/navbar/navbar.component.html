@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg navbar-primary bg-light">
+  <div class="container">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">AZARC APP</a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul *ngIf="loggedIn" class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            [routerLink]="['../employees']"
+            >Employees</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+      </ul>
+      <div *ngIf="loggedIn" class="d-flex">
+        <div class="btn-group">
+          <button type="button" class="btn btn-secondary">
+            <p class="mb-2">
+              <span class="font-weight-bold">Name: </span
+              >{{ userDetails.firstName }}
+            </p>
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+            id="dropdownMenuReference"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            data-bs-reference="parent"
+          >
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+            <div class="container">
+              <div class="text-center mb-4">
+                <img
+                  [src]="userDetails.photoUrl"
+                  alt="user-avatar"
+                  class="user-avatar"
+                />
+              </div>
+
+              <p class="mb-2">
+                <span class="font-weight-bold">Name: </span
+                >{{ userDetails.name }}
+              </p>
+
+              <p class="mb-2">
+                <span class="font-weight-bold">Email: </span
+                >{{ userDetails.email }}
+              </p>
+
+              <button class="btn btn-block btn-danger mt-4" (click)="signOut()">
+                Sign out
+              </button>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

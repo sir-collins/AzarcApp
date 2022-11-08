@@ -1,0 +1,28 @@
+<app-navbar [loggedIn]="loggedIn" [userDetails]="user" (logOut)="onLogOff()">
+</app-navbar>
+<div class="row">
+  <router-outlet></router-outlet>
+  <app-dashboard *ngIf="loggedIn" [userDetails]="user"></app-dashboard>
+</div>
+
+<div class="container-fluid">
+  <div class="card-body">
+    <asl-google-signin-button
+      type="standard"
+      size="large"
+      width="300"
+      *ngIf="!loggedIn"
+    ></asl-google-signin-button>
+  </div>
+</div>
+
+<!-- <div class="jumbotron">
+    <h1 class="display-4">Welcome</h1>
+    <p class="lead">Please select your option below</p>
+    <hr class="my-4" />
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" [routerLink]="['users']" role="button"
+        >Users</a
+      >
+    </p>
+  </div> -->

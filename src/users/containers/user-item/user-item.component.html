@@ -1,0 +1,8 @@
+<fieldset [disabled]="loading$ | async">
+  <legend>User form</legend>
+  <app-user-form
+    [user]="user$ | async"
+    (onUpdateValue)="updateItem($event)"
+    (onCreateValue)="createUser($event)"
+  ></app-user-form>
+</fieldset>

@@ -1,0 +1,184 @@
+{
+  "users": [
+    {
+      "firstName": "Isaac",
+      "lastName": "Putin",
+      "address": "140 SA",
+      "officeLocation": "Cape Town",
+      "phoneNumber": "932384",
+      "emailAddress": "isaac.putin@azzarc.com",
+      "postalCode": "9091",
+      "id": 4
+    },
+    {
+      "firstName": "Jone",
+      "lastName": "Mac",
+      "address": "138 SA",
+      "officeLocation": "Cape Town",
+      "phoneNumber": "27950288",
+      "emailAddress": "jone.mac@azzarc.com",
+      "postalCode": "2910",
+      "id": 6
+    },
+    {
+      "firstName": "David",
+      "lastName": "Neo",
+      "address": "137 LO",
+      "officeLocation": "London",
+      "phoneNumber": "123456",
+      "emailAddress": "david.neo@azzarc.com",
+      "postalCode": "1672",
+      "id": 7
+    },
+    {
+      "firstName": "Daniel",
+      "lastName": "Roast",
+      "address": "136 SA",
+      "officeLocation": "Cape Town",
+      "phoneNumber": "19716939",
+      "emailAddress": "daniel.roast@azzarc.com",
+      "postalCode": "7567",
+      "id": 8
+    },
+    {
+      "firstName": "Terry",
+      "lastName": "Medhurst",
+      "address": "135 CA",
+      "officeLocation": "Los Angeles",
+      "phoneNumber": "75105820",
+      "emailAddress": "terry.medhurs@azzarc.com",
+      "postalCode": "1045",
+      "id": 9
+    },
+    {
+      "firstName": "Ian",
+      "lastName": "Mutuli",
+      "address": "134 SA",
+      "officeLocation": "Cape Town",
+      "phoneNumber": "5235090",
+      "emailAddress": "ian.mutuli@azzarc.com",
+      "postalCode": "1179",
+      "id": 10
+    },
+    {
+      "firstName": "Romin",
+      "lastName": "Irani",
+      "address": "133 LO",
+      "officeLocation": "London",
+      "phoneNumber": "909535",
+      "emailAddress": "romani.irani@azzarc.com",
+      "postalCode": "6486",
+      "id": 11
+    },
+    {
+      "firstName": "Neil",
+      "lastName": "Moss",
+      "address": "132 SA",
+      "officeLocation": "Cape Town",
+      "phoneNumber": "20I545",
+      "emailAddress": "neil.moss@azzarc.com",
+      "postalCode": "3606",
+      "id": 12
+    },
+    {
+      "firstName": "Tom",
+      "lastName": "Hanks",
+      "address": "131 LO",
+      "officeLocation": "London",
+      "phoneNumber": "63928423",
+      "emailAddress": "tom.hanks@azzarc.com",
+      "postalCode": "3606",
+      "id": 13
+    },
+    {
+      "firstName": "Bob",
+      "lastName": "Shyam",
+      "address": "130 SA",
+      "officeLocation": "Cape Town",
+      "phoneNumber": "3487334",
+      "emailAddress": "krish.lee@azzarc.com",
+      "postalCode": "0729",
+      "id": 14
+    },
+    {
+      "firstName": "Peter",
+      "lastName": "Stephens",
+      "address": "129 CA",
+      "officeLocation": "Los Angeles",
+      "phoneNumber": "058349",
+      "emailAddress": "peter.stephens@azzarc.com",
+      "postalCode": "5810",
+      "id": 15
+    },
+    {
+      "firstName": "Eric",
+      "lastName": "Patison",
+      "address": "128 CA",
+      "officeLocation": "Los Angeles",
+      "phoneNumber": "908745",
+      "emailAddress": "eric.patison@azzarc.com",
+      "postalCode": "7293",
+      "id": 16
+    },
+    {
+      "firstName": "Richard",
+      "lastName": "Lizard",
+      "address": "127 LO",
+      "officeLocation": "London",
+      "phoneNumber": "960524",
+      "emailAddress": "richard.lizard@azzarc.com",
+      "postalCode": "8100",
+      "id": 17
+    },
+    {
+      "firstName": "Jose",
+      "lastName": "Killer",
+      "address": "126 SA",
+      "officeLocation": "Cape Town",
+      "phoneNumber": "4944592",
+      "emailAddress": "jose.killer@azzarc.com",
+      "postalCode": "1855",
+      "id": 18
+    },
+    {
+      "firstName": "Pat",
+      "lastName": "Beverly",
+      "address": "126 LO",
+      "officeLocation": "London",
+      "phoneNumber": "3078164",
+      "emailAddress": "pat.beverly@azzarc.com",
+      "postalCode": "6620",
+      "id": 19
+    },
+    {
+      "firstName": "Nick",
+      "lastName": "Prayer",
+      "address": "125 SA",
+      "officeLocation": "Cape Town",
+      "phoneNumber": "123456",
+      "emailAddress": "nick.prayer@azzarc.com",
+      "postalCode": "8635",
+      "id": 20
+    },
+    {
+      "firstName": "Lucy",
+      "lastName": "Luu",
+      "address": "124 SA",
+      "officeLocation": "Cape Town",
+      "phoneNumber": "3948534",
+      "emailAddress": "lucy.luu@azzarc.com",
+      "postalCode": "5705",
+      "id": 22
+    },
+    {
+      "firstName": "Petra",
+      "lastName": "Erica",
+      "address": "123 CA",
+      "officeLocation": "Los Angeles",
+      "phoneNumber": "2075744",
+      "emailAddress": "petra.erica@azzarc.com",
+      "postalCode": "9312",
+      "id": 21
+    }
+  ]
+}
