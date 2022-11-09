@@ -11,6 +11,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { HomeComponent } from './containers/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 import * as fromComponents from './components';
 import * as fromContainers from './containers';
@@ -45,7 +46,7 @@ import { GoogleLoginProvider } from '@abacritt/angularx-social-login';
         providers: [
           {
             id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider('idValueHere'),
+            provider: new GoogleLoginProvider(environment.clientId),
           },
         ],
         onError: (err) => {
