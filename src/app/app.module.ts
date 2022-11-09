@@ -15,12 +15,17 @@ import { environment } from '../environments/environment';
 
 import * as fromComponents from './components';
 import * as fromContainers from './containers';
+import * as fromGuards from './guards';
 
 import {
   SocialLoginModule,
   SocialAuthServiceConfig,
 } from '@abacritt/angularx-social-login';
 import { GoogleLoginProvider } from '@abacritt/angularx-social-login';
+
+import { reducer } from './store/reducers/user.reducer';
+import { effects } from './store/effects';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,8 +39,11 @@ import { GoogleLoginProvider } from '@abacritt/angularx-social-login';
     AppRoutingModule,
     HttpClientModule,
     SocialLoginModule,
+    ReactiveFormsModule,
+    FormsModule,
     StoreModule.forRoot({}, {}),
-    EffectsModule.forRoot([]),
+    StoreModule.forFeature('userProfile', reducer),
+    EffectsModule.forRoot(effects),
     StoreDevtoolsModule.instrument(),
   ],
   providers: [
@@ -54,6 +62,7 @@ import { GoogleLoginProvider } from '@abacritt/angularx-social-login';
         },
       } as SocialAuthServiceConfig,
     },
+    ...fromGuards.guards,
   ],
   bootstrap: [AppComponent],
 })

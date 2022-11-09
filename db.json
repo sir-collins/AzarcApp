@@ -180,5 +180,19 @@
       "postalCode": "9312",
       "id": 21
     }
-  ]
+  ],
+  "profile": {
+    "name": "",
+    "firstName": "",
+    "lastName": "",
+    "address": "",
+    "officeLocation": "",
+    "phoneNumber": "",
+    "emailAddress": "",
+    "region": "",
+    "town": "",
+    "country": "",
+    "postalCode": "",
+    "id": 0
+  }
 }

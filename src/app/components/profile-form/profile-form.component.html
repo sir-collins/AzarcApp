@@ -1,1 +1,132 @@
-<p>profile-form works!</p>
+<div class="col">
+  <div class="card">
+    <div class="card-header d-flex justify-content-between">
+      Sheena Shrestha
+
+      <span class="align-self-end">
+        <a
+          data-original-title="Edit this user"
+          data-toggle="tooltip"
+          type="button"
+          class="btn btn-sm btn-warning"
+          (click)="onUpdate()"
+        >
+          Edit Profile
+        </a>
+      </span>
+    </div>
+    <div class="card-body">
+      <form class="row" [formGroup]="profileForm">
+        <div class="col-md-2 col-lg-2">
+          <!-- <img
+              alt="User Pic"
+              src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png"
+              class="img-circle img-responsive"
+            /> -->
+        </div>
+
+        <div class="col-md-5 col-lg-5">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td>First Name:</td>
+                <td>{{ getFirstName }}</td>
+              </tr>
+              <tr>
+                <td>Last Name:</td>
+                <td>{{ getLastName }}</td>
+              </tr>
+              <tr>
+                <td>Email:</td>
+                <td>{{ getEmail }}</td>
+              </tr>
+              <tr>
+                <td>Phone Number:</td>
+                <td>{{ getPhone }}</td>
+              </tr>
+              <tr>
+                <td>Work Office Location:</td>
+                <td>
+                  <select
+                    id="officeLocation"
+                    class="form-control"
+                    formControlName="officeLocation"
+                  >
+                    <option selected>Choose...</option>
+                    <option>Los Angeles</option>
+                    <option>Cape Town</option>
+                    <option>London</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-md-5 col-lg-5">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td>Country:</td>
+                <td>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="country"
+                    formControlName="country"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Region:</td>
+                <td>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="region"
+                    formControlName="region"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Town:</td>
+                <td>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="town"
+                    formControlName="town"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Address</td>
+                <td>
+                  <textarea
+                    rows="5"
+                    cols="33"
+                    class="form-control"
+                    id="address"
+                    formControlName="address"
+                  ></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td>Postal Code</td>
+                <td>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="postalCode"
+                    formControlName="postalCode"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </form>
+    </div>
+    <div class="card-footer">Welcome to your profile 👋🏿</div>
+  </div>
+</div>

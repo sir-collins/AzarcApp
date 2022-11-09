@@ -1,44 +1,29 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormControl } from '@angular/forms';
-import { UserProfile } from 'src/app/models/user-profile.model';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { UserProfile } from '../../models/user-profile.model';
+
+import { Store } from '@ngrx/store';
+import * as fromStore from '../../store';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
   styleUrls: ['./user-profile.component.scss'],
 })
 export class UserProfileComponent implements OnInit {
-  @Input() user = <UserProfile>{};
+  user$!: Observable<0 | UserProfile | null | undefined>;
+  loading$!: Observable<boolean>;
 
-  @Output() onUpdateValue = new EventEmitter<UserProfile>();
-
-  profileForm = this.fb.group({
-    firstName: [''],
-    lastName: [''],
-    address: [''],
-    region: [''],
-    officeLocation: [''],
-    phoneNumber: [''],
-    emailAddress: [''],
-    postalCode: [''],
-    id: [0],
-  });
-
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private store: Store<fromStore.UserState>,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    if (this.user && this.user.id) {
-      this.profileForm.patchValue({
-        ...this.user,
-      });
-    }
+    this.user$ = this.store.select(fromStore.getCurrentUser);
+    this.loading$ = this.store.select(fromStore.getUsersLoading);
   }
-
-  onUpdate() {
-    const { value, valid } = this.profileForm;
-    this.onUpdateValue.emit(value as UserProfile);
-  }
-
-  get getRegion(): string | null {
-    return (this.profileForm.get('region') as FormControl).value;
+  updateItem(user: UserProfile) {
+    this.store.dispatch(fromStore.updateUser({ user }));
   }
 }

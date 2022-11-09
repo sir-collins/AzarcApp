@@ -6,7 +6,8 @@ import { UserLoginComponent } from './components';
 import { HomeComponent } from './containers/home/home.component';
 
 import * as fromContainers from '../app/containers';
-import * as fromComponents from '../app/components';
+// guards
+import * as fromGuards from './guards';
 
 const routes: Routes = [
   {
@@ -19,6 +20,11 @@ const routes: Routes = [
     component: fromContainers.HomeLayoutComponent,
     canActivate: [],
     children: [
+      {
+        path: 'profile',
+        //canActivate: [fromGuards.UserExistsGuard],
+        component: fromContainers.UserProfileComponent,
+      },
       {
         path: 'employees',
         loadChildren: () =>

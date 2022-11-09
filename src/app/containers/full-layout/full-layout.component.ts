@@ -21,7 +21,7 @@ export class FullLayoutComponent implements OnInit {
       this.loggedIn = user != null;
       if (this.loggedIn) {
         localStorage.setItem('google_auth', JSON.stringify(user));
-        this.router.navigateByUrl('/home').then();
+        this.router.navigateByUrl('/home/profile').then();
       }
     });
   }
