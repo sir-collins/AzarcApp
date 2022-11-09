@@ -45,9 +45,7 @@ import { GoogleLoginProvider } from '@abacritt/angularx-social-login';
         providers: [
           {
             id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider(
-              '325729004992-7l22lljv7p43abvdetr93ecrs1olj11r.apps.googleusercontent.com'
-            ),
+            provider: new GoogleLoginProvider('idValueHere'),
           },
         ],
         onError: (err) => {
