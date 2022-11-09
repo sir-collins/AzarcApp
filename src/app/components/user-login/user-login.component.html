@@ -1,1 +1,18 @@
-
+<main class="form-signin">
+  <form class="container d-flex flex-column">
+    <div class="col align-self-center">
+      <h1 class="h3 mb-5 fw-normal">AZARC APP</h1>
+    </div>
+    <div class="col align-self-center">
+      <asl-google-signin-button
+        type="standard"
+        size="large"
+        width="300"
+        *ngIf="!loggedIn"
+      ></asl-google-signin-button>
+    </div>
+    <div class="col align-self-center">
+      <p class="mt-5 mb-3 text-muted">&copy; Azarc.io 2022</p>
+    </div>
+  </form>
+</main>

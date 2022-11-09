@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-primary bg-light">
+<nav class="navbar navbar-expand-lg navbar-primary bg-dark text-white">
   <div class="container">
     <button
       class="navbar-toggler"
@@ -11,32 +11,29 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">AZARC APP</a>
+    <a class="navbar-brand text-white" href="#">AZARC APP</a>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul *ngIf="loggedIn" class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a
-            class="nav-link active"
+            class="nav-link text-white active"
             aria-current="page"
-            [routerLink]="['../employees']"
+            [routerLink]="['../home/employees']"
             >Employees</a
           >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
         </li>
       </ul>
       <div *ngIf="loggedIn" class="d-flex">
         <div class="btn-group">
-          <button type="button" class="btn btn-secondary">
+          <button type="button" class="btn btn-outline-light">
             <p class="mb-2">
-              <span class="font-weight-bold">Name: </span
+              <span class="font-weight-bold">Welcome! </span
               >{{ userDetails.firstName }}
             </p>
           </button>
           <button
             type="button"
-            class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+            class="btn btn-outline-light dropdown-toggle dropdown-toggle-split"
             id="dropdownMenuReference"
             data-bs-toggle="dropdown"
             aria-expanded="false"
@@ -45,7 +42,18 @@
             <span class="visually-hidden">Toggle Dropdown</span>
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuReference">
-            <div class="container">
+            <li>
+              <a class="dropdown-item" href="#">{{ userDetails.name }}</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">{{ userDetails.email }}</a>
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+
+            <!-- <div class="container">
               <div class="text-center mb-4">
                 <img
                   [src]="userDetails.photoUrl"
@@ -67,7 +75,7 @@
               <button class="btn btn-block btn-danger mt-4" (click)="signOut()">
                 Sign out
               </button>
-            </div>
+            </div> -->
           </ul>
         </div>
       </div>

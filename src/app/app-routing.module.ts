@@ -3,12 +3,20 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { UserLoginComponent } from './components';
 
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './containers/home/home.component';
+
+import * as fromContainers from '../app/containers';
+import * as fromComponents from '../app/components';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: fromContainers.FullLayoutComponent,
+    canActivate: [],
+  },
+  {
+    path: 'home',
+    component: fromContainers.HomeLayoutComponent,
     canActivate: [],
     children: [
       {
@@ -17,11 +25,6 @@ const routes: Routes = [
           import('../users/users.module').then((m) => m.UsersModule),
       },
     ],
-  },
-  {
-    path: 'login',
-    component: UserLoginComponent,
-    canActivate: [],
   },
 ];
 

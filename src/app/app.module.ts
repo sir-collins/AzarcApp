@@ -8,11 +8,12 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 
-import { HomeComponent } from './home/home.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './containers/home/home.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import * as fromComponents from './components';
+import * as fromContainers from './containers';
 
 import {
   SocialLoginModule,
@@ -23,9 +24,9 @@ import { GoogleLoginProvider } from '@abacritt/angularx-social-login';
 @NgModule({
   declarations: [
     ...fromComponents.components,
+    ...fromContainers.containers,
     AppComponent,
     HomeComponent,
-    NavbarComponent,
   ],
   imports: [
     BrowserModule,
